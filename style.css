@@ -48,6 +48,9 @@ body {
   border-radius: 5px;
   font-size: 12px;
 }
+.songlist ul{
+  margin-right: 5px;
+}
 .playnow {
   display: flex;
   
