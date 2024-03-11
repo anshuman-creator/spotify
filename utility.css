@@ -46,3 +46,28 @@ a {
 .p-1{
   padding: 20px;
 }
+
+
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(165, 165, 165, 0.5); /* Adjust colors as needed */
+  border-radius: 10px; /* Rounded corners */
+  border: 2px solid rgba(255, 255, 255, 0.1); /* Adjust colors as needed */
+}
+
+/* Remove scrollbar arrows */
+*::-webkit-scrollbar-button {
+  display: none;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #333;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #575656;
+  border-radius: 10px;
+}
