@@ -6,6 +6,8 @@ body {
 .left {
   width: 25vw;
   padding: 10px;
+  min-width: 400px;
+  max-width: 525px;
 }
 .right {
   width: 75vw;
@@ -31,7 +33,7 @@ body {
 .library {
   min-height: 70vh;
 }
-.songlist{
+.songlist {
   height: 400px;
   overflow: auto;
   margin: 10px 0;
@@ -42,26 +44,41 @@ body {
   gap: 12px;
   padding: 10px 0;
   cursor: pointer;
-  border: 1px solid white;
-  margin: 12px 0;
+  border: 1px solid #afafaf;
+  margin: 6px 0;
   padding: 12px 10px;
-  border-radius: 5px;
+  border-radius: 32px;
   font-size: 12px;
+  justify-content: space-between;
+  color: #c4c4c4;
+  transition: all 0.3s ease;
 }
-.songlist ul{
+.songlist ul li:hover {
+  color: white;
+  background-color: #303030;
+}
+.songlist ul li:hover .playnow img {
+  background-color: #00ba00;
+  filter: invert(0);
+  border-radius: 100px;
+  padding: 5px;
+  margin-left: 2px;
+  transition: all 0.3s cubic-bezier(0, 0.72, 0.25, 1);
+}
+
+.songlist ul {
   margin-right: 5px;
 }
 .playnow {
   display: flex;
-  
+
   justify-content: center;
   align-items: center;
 }
-.playnow span{
+.playnow span {
   font-size: 12px;
-  width: 50px;
 }
-.info{
+.info {
   width: 180px;
 }
 .heading img {
@@ -75,10 +92,10 @@ body {
 .header > * {
   padding: 10px 14px;
 }
-.header .nav > * {
-}
 .container .right {
   margin: 14px 0;
+  width: 75vw;
+  min-width: 750px;
 }
 .cardContainer {
   overflow-y: auto;
@@ -162,15 +179,51 @@ body {
 }
 
 .playbar {
-  position: absolute;
-  bottom: 0;
-  background-color: #bcc8bc;
-  width: 98%;
+  position: fixed;
+  bottom: 2px;
+  background-color: #c3c3c3;
+  width: 100vw;
   padding: 10px;
+  padding-bottom: 18px;
+  filter: invert(1);
 }
 .songbuttons {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
+}
+.songbuttons img {
+  cursor: pointer;
+}
+.seekbar {
+  height: 4px;
+  background-color: black;
+  width: 97%;
+  position: absolute;
+  bottom: 5px;
+  border-radius: 10px;
+}
+.circle {
+  width: 10px;
+  height: 10px;
+  background-color: #000000;
+  border-radius: 30px;
+  position: relative;
+  bottom: 4px;
+  background-color: #12ca00;
+    filter: invert(1);
+  left: 0%;
+  transition: left 0.5s;
+}
+.songinfo, .songtime{
+  color: black;
+  padding: 0 10px;
+}
+
+.bar-seek {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 98%;
 }
