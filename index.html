@@ -10,6 +10,9 @@
   <body>
     <div class="container flex bg-black">
       <div class="left">
+        <div class="x">
+          <img class="invert" src="./assets/x.svg" alt="">
+        </div>
         <div class="home bg-grey rounded m-1 p-1">
           <ul>
             <li>
@@ -37,38 +40,42 @@
       <div class="right bg-grey rounded m-1">
         <div class="header flex item-center">
           <div class="nav">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              width="24"
-              height="24"
-              color="#ffffff"
-              fill="none"
-            >
-              <path
-                d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              width="24"
-              height="24"
-              color="#ffffff"
-              fill="none"
-            >
-              <path
-                d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
+            <div class="ham-cont flex">
+              <img class="ham-bg invert" src="./assets/ham-bg.svg" alt="" />
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                color="#ffffff"
+                fill="none"
+              >
+                <path
+                  d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                color="#ffffff"
+                fill="none"
+              >
+                <path
+                  d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
           </div>
           <div class="button">
             <button class="signup">Sign up</button>
@@ -130,13 +137,11 @@
         <div class="bar-seek">
           <div class="songinfo"></div>
           <div class="songbuttons">
-            <img id="previous" src="./assets/prevsong.svg" alt="previous" />
-            <img id="play" src="./assets/play.svg" alt="play" />
-            <img id="next" src="./assets/nextsong.svg" alt="" />
+            <img width="30" id="previous" src="./assets/prevsong.svg" alt="previous" />
+            <img width="30" id="play" src="./assets/play.svg" alt="play" />
+            <img width="30" id="next" src="./assets/nextsong.svg" alt="" />
           </div>
-          <div class="songtime">
-            
-          </div>
+          <div class="songtime"></div>
         </div>
       </div>
     </div>

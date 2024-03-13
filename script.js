@@ -89,16 +89,39 @@ async function main() {
   ////
 
   currentsong.addEventListener("timeupdate", () => {
-    document.querySelector(".songtime").innerHTML = `${SecToMinAndSec(currentsong.currentTime)} / ${SecToMinAndSec(currentsong.duration)}`;
-    document.querySelector('.circle').style.left = (currentsong.currentTime / currentsong.duration) * 100 + "%"
+    document.querySelector(".songtime").innerHTML = `${SecToMinAndSec(
+      currentsong.currentTime
+    )} / ${SecToMinAndSec(currentsong.duration)}`;
+    document.querySelector(".circle").style.left =
+      (currentsong.currentTime / currentsong.duration) * 100 + "%";
+  });
+  ///
+  document.querySelector(".seekbar").addEventListener("click", (e) => {
+    let percent = (e.offsetX / e.target.getBoundingClientRect().width) * 100;
+    document.querySelector(".circle ").style.left = percent + "%";
+    currentsong.currentTime = (currentsong.duration * percent) / 100;
   });
 
- document.querySelector('.seekbar').addEventListener("click", e=>{
-  let percent = (e.offsetX/e.target.getBoundingClientRect().width) * 100;
-  document.querySelector('.circle ').style.left = percent + "%"
-  currentsong.currentTime = ((currentsong.duration)*percent)/100
- })
- 
+  ///
+  document.querySelector(".ham-bg").addEventListener("click", () => {
+    document.querySelector(".left").style.left = "0";
+  });
 
+  document.querySelector(".x").addEventListener("click", () => {
+    document.querySelector(".left").style.left = "-120%";
+  });
+
+  previous.addEventListener("click", () => {
+    let index = songs.indexOf(currentsong.src.split("/").splice(-1)[0]);
+    if (index - 1 >= 0) {
+      playMusic(songs[index - 1]);
+    }
+  });
+  next.addEventListener("click", () => {
+    let index = songs.indexOf(currentsong.src.split("/").splice(-1)[0]);
+    if (index + 1 > length) {
+      playMusic(songs[index + 1]);
+    }
+  });
 }
 main();

@@ -9,10 +9,13 @@ body {
   min-width: 400px;
   max-width: 525px;
 }
-.right {
+.container .right {
   width: 75vw;
   position: relative;
+  margin: 14px 0;
+  border-radius: 7px;
 }
+
 .home ul li {
   list-style: none;
   padding: 10px 0;
@@ -51,12 +54,15 @@ body {
   font-size: 12px;
   justify-content: space-between;
   color: #c4c4c4;
-  transition: all 0.3s ease;
+  background-color: transparent; /* Set default background color */
+  transition: background-color 0.3s ease; /* Apply transition to background color */
 }
+
 .songlist ul li:hover {
   color: white;
-  background-color: #303030;
+  background-color: #303030; /* Change background color on hover */
 }
+
 .songlist ul li:hover .playnow img {
   background-color: #00ba00;
   filter: invert(0);
@@ -65,7 +71,6 @@ body {
   margin-left: 2px;
   transition: all 0.3s cubic-bezier(0, 0.72, 0.25, 1);
 }
-
 .songlist ul {
   margin-right: 5px;
 }
@@ -92,11 +97,6 @@ body {
 .header > * {
   padding: 10px 14px;
 }
-.container .right {
-  margin: 14px 0;
-  width: 75vw;
-  min-width: 750px;
-}
 .cardContainer {
   overflow-y: auto;
   max-height: 70vh;
@@ -107,7 +107,7 @@ body {
 }
 .card img {
   object-fit: cover;
-  width: 175px;
+  width: 166px;
   height: 166px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
@@ -151,7 +151,7 @@ body {
   opacity: 0;
   transition: all 0.3s cubic-bezier(0, 0, 0.34, 0.95);
 }
-.play:hover {
+.card:hover .play {
   opacity: 100%;
   bottom: 105px;
 }
@@ -179,13 +179,19 @@ body {
 }
 
 .playbar {
+  display: flex;
   position: fixed;
+  justify-content: center;
   bottom: 2px;
-  background-color: #c3c3c3;
-  width: 100vw;
+  left: 1px;
+  background-color: #ffffff;
+  width: 99vw;
+  height: 70px;
+  margin: 10px 0;
   padding: 10px;
   padding-bottom: 18px;
   filter: invert(1);
+  border-radius: 8px;
 }
 .songbuttons {
   display: flex;
@@ -197,8 +203,9 @@ body {
   cursor: pointer;
 }
 .seekbar {
+  padding: 7px 0;
   height: 4px;
-  background-color: black;
+  background-color: #c3c3c3;
   width: 97%;
   position: absolute;
   bottom: 5px;
@@ -212,11 +219,12 @@ body {
   position: relative;
   bottom: 4px;
   background-color: #12ca00;
-    filter: invert(1);
+  filter: invert(1);
   left: 0%;
   transition: left 0.5s;
 }
-.songinfo, .songtime{
+.songinfo,
+.songtime {
   color: black;
   padding: 0 10px;
 }
@@ -226,4 +234,75 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 98%;
+}
+.ham-bg {
+  display: none;
+}
+.ham-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.x {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+}
+.x img {
+  width: 35px;
+}
+.songbuttons img:hover {
+  background-color: #00ba00; /* Change to desired background color */
+  filter: invert(1);
+  border-radius: 100px;
+  padding: 5px;
+  transition: all 0.2s cubic-bezier(0.15, 0.46, 0.36, 0.91);
+}
+
+@media (max-width: 1200px) {
+  .left {
+    position: absolute;
+    left: -120%;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    width: 350px;
+    background: black;
+    border-radius: 7px;
+    min-width: auto;
+  }
+  .left .library .songlist ul li {
+    font-size: 11px;
+    padding: 4px 6px;
+  }
+  .playnow span {
+    font-size: 9px;
+    width: 39px;
+  }
+  .container .right {
+    width: 100vw;
+    margin: 0;
+  }
+  .ham-bg {
+    display: block;
+  }
+  .songlist {
+    height: 547px;
+  }
+  .seekbar {
+    width: 89%;
+  }
+  .playbar {
+    width: 95vw;
+  }
+  .card img{
+    width: 128px;
+  }
+  .cardContainer .card{
+    width: 130px;
+  }
+  .cardContainer{
+    justify-content: center;
+    margin: 0;
+  }
 }
