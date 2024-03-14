@@ -11,7 +11,7 @@
     <div class="container flex bg-black">
       <div class="left">
         <div class="x">
-          <img class="invert" src="./assets/x.svg" alt="">
+          <img class="invert" src="./assets/x.svg" alt="" />
         </div>
         <div class="home bg-grey rounded m-1 p-1">
           <ul>
@@ -85,48 +85,30 @@
         <div class="spotify-playlist">
           <h1 class="p-1">Spotify Playlist</h1>
           <div class="cardContainer">
-            <div class="card">
-              <div class="play">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="50%"
-                  height="50%"
-                  fill="black"
-                >
-                  <circle cx="12" cy="12" r="10" fill="#00ba00" />
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
 
+
+            <div data-folder="feelgood" class="card">
+              <div class="play"><svg xmlns="http://www.w3.org/2000/svg"viewBox="0 0 24 24" width="50%"height="50%" fill="black">
+                  <circle cx="12" cy="12" r="10" fill="#00ba00" /><path d="M8 5v14l11-7z" /></svg>
+              </div>
               <img src="./img/feel good.jpg" alt="" />
               <h2>Feel Good</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo,
-                molestiae.
+                Lorem ipsum dolor sit amet consectetur, 
               </p>
             </div>
-            <div class="card">
-              <div class="play">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="50%"
-                  height="50%"
-                  fill="black"
-                >
-                  <circle cx="12" cy="12" r="10" fill="#00ba00" />
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
 
-              <img src="./img/phonk.jpeg.jpg" alt="" />
-              <h2>Phonk</h2>
+            <div data-folder="sad" class="card">
+              <div class="play"><svg xmlns="http://www.w3.org/2000/svg"viewBox="0 0 24 24" width="50%"height="50%" fill="black">
+                  <circle cx="12" cy="12" r="10" fill="#00ba00" /><path d="M8 5v14l11-7z" /></svg>
+              </div>
+              <img src="./img/sad.jpeg.jpg" alt="" />
+              <h2>Sad</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo,
-                molestiae.
+                Lorem ipsum dolor sit amet consectetur, 
               </p>
             </div>
+            
           </div>
         </div>
       </div>
@@ -137,12 +119,27 @@
         <div class="bar-seek">
           <div class="songinfo"></div>
           <div class="songbuttons">
-            <img width="30" id="previous" src="./assets/prevsong.svg" alt="previous" />
+            <img
+              width="30"
+              id="previous"
+              src="./assets/prevsong.svg"
+              alt="previous"
+            />
             <img width="30" id="play" src="./assets/play.svg" alt="play" />
             <img width="30" id="next" src="./assets/nextsong.svg" alt="" />
           </div>
-          <div class="songtime"></div>
-        </div>
+          <div class="timevol">
+          
+
+            <div class="volume">
+              <img width="25" class="invert" src="./assets/volume.svg" alt="">
+              <div class="range">
+                <input type="range" name="volume" id="">
+              </div>
+            </div>
+            <div class="songtime"></div>
+          </div>
+          </div>
       </div>
     </div>
 
