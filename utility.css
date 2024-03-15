@@ -68,3 +68,22 @@ a {
 ::-webkit-scrollbar-track {
   background: #333;
 }
+
+
+
+.range input[type="range"] {
+  width: 100px; /* Adjust the width as needed */
+  height: 2px; /* Adjust the thickness */
+  background-color: rgb(0, 255, 0) !important; /* Force green color */
+  border: none; /* Remove default border */
+  outline: none; /* Remove default outline */
+  border-radius: 5px; /* Optional: Add border radius for rounded corners */
+}
+
+/* Optional: Change the appearance of the thumb */
+.range input[type="range"]::-webkit-slider-thumb {
+  width: 8px; /* Adjust the size of the thumb */
+  height: 8px;
+  background-color: rgb(0, 255, 0) !important; /* Force green color */
+  border-radius: 50%; /* Optional: Make the thumb round */
+}

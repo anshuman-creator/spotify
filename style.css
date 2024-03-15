@@ -224,7 +224,7 @@ body {
   left: 0%;
   transition: left 0.5s;
 }
-.songinfo{
+.songinfo {
   width: 290px;
 }
 .songinfo,
@@ -264,18 +264,23 @@ body {
   transition: all 0.2s cubic-bezier(0.15, 0.46, 0.36, 0.91);
 }
 
-.timevol{
+.timevol {
   display: flex;
-    align-items: center;
+  align-items: center;
 }
-.volume{
+.volume {
   display: flex;
   gap: 5px;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
-.range{
+.range {
+  filter: invert(1);
+  display: flex;
   height: 16px;
+  cursor: pointer;
+  align-items: center;
 }
 
 @media (max-width: 900px) {
@@ -308,7 +313,7 @@ body {
   .songlist {
     height: 547px;
   }
-  .songinfo{
+  .songinfo {
     text-align: center;
   }
   .seekbar {
@@ -318,18 +323,18 @@ body {
     width: 95vw;
     height: 113px;
   }
-  .bar-seek{
+  .bar-seek {
     flex-direction: column;
     row-gap: 10px;
     margin-bottom: 14px;
   }
-  .card img{
+  .card img {
     width: 128px;
   }
-  .cardContainer .card{
+  .cardContainer .card {
     width: 130px;
   }
-  .cardContainer{
+  .cardContainer {
     justify-content: center;
     margin: 0;
   }
