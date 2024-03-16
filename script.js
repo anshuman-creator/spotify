@@ -19,7 +19,7 @@ let songs = []; // Initialize the songs array
 
 async function getSongs(folder) {
   currfolder = folder; // Update the global variable instead of declaring a new one
-  let response = await fetch(`http://127.0.0.1:3000/${folder}/`);
+  let response = await fetch(`/${folder}/`);
   let text = await response.text();
   let div = document.createElement("div");
   div.innerHTML = text;
@@ -62,7 +62,7 @@ async function getSongs(folder) {
 
 // Function to play music track with optional pause parameter
 const playMusic = (track, pause = false) => {
-  currentsong.src = `http://127.0.0.1:3000/${currfolder}/` + track;
+  currentsong.src = `/${currfolder}/` + track;
   if (!pause) {
     currentsong.play(); // Start playing the music
     play.src = "./assets/pause.svg"; // Change the play button icon to pause
@@ -73,7 +73,7 @@ const playMusic = (track, pause = false) => {
 };
 
 async function displayAlbums() {
-  let response = await fetch(`http://127.0.0.1:3000/songs/`);
+  let response = await fetch(`/songs/`);
   let text = await response.text();
   let div = document.createElement("div");
   div.innerHTML = text;
@@ -85,7 +85,7 @@ async function displayAlbums() {
     if (e.href.includes("/songs")) {
       let folder = e.href.split("/").slice(-2)[0];
       let response = await fetch(
-        `http://127.0.0.1:3000/songs/${folder}/info.json`
+        `/songs/${folder}/info.json`
       );
       let text = await response.json();
       cardContainer.innerHTML += `<div data-folder="${folder}" class="card">
